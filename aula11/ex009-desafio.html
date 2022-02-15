@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        main {
+            background-color: aqua;
+            width: 400px;
+            height: 150px;
+            margin: auto;
+            margin-top: 100px;
+            border: 10px;
+        }
+
+        p {
+            display: inline-block;
+        }
+
+        div {
+            line-height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Sistema de Nacionalidade</h1>
+        <p>Qual país você vive?</p> <input type="text" id="nacional">
+        <input type="button" value="Verificar" onclick="verificar()">
+        <div id="res">
+        </div>
+        <div id="viaj">
+        </div>
+        <script>
+            function verificar() {
+                var naci = document.querySelector('input#nacional')
+                var res = document.querySelector('div#res')
+                var via = document.querySelector('div#viaj')
+                var pais = naci.value
+                res.innerHTML = `Que legal! Você vive em <strong>${pais}</strong> deve ser bonito lá`
+                if (pais == 'Brasil') {
+                    res.innerHTML = `Então você é <strong>${pais}</strong>, nunca imaginei encontrar outro Brasileiro por aqui! `
+                } else {
+                    res.innerHTML = `<strong>${pais}</strong>, Nossa lá deve ser muito bonito, sempre quis conhecer! `
+                }
+                via.innerHTML = `Eu adoro viajar quero conhecer <strong>${pais}</strong> tambem `
+            }
+        </script>
+    </main>
+
+</body>
+
+</html>
+
+<!--var país = 'Brasil'
+console.log(`Vivendo em pais ${país}`)
+if (país == 'Brasil') {
+    console.log('Você é Brasileiro!');
+} else {
+    console.log('Você é Estrangeiro!');
+}
+-->
