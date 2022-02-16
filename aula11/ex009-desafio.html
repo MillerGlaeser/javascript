@@ -20,10 +20,13 @@
             margin: auto;
             margin-top: 100px;
             border: 10px;
+            text-align: center;
+            border-radius: 20px;
         }
-
+        
         p {
             display: inline-block;
+            line-height: 10px;
         }
 
         div {
@@ -47,13 +50,13 @@
                 var res = document.querySelector('div#res')
                 var via = document.querySelector('div#viaj')
                 var pais = naci.value
-                res.innerHTML = `Que legal! Você vive em <strong>${pais}</strong> deve ser bonito lá`
+                res.innerHTML = `<p>Que legal! Você vive em <strong>${pais}</strong> deve ser bonito lá</p>`
                 if (pais == 'Brasil') {
-                    res.innerHTML = `Então você é <strong>${pais}</strong>, nunca imaginei encontrar outro Brasileiro por aqui! `
+                    res.innerHTML = `<p>Então você é <strong>${pais}</strong>, nunca imaginei encontrar outro Brasileiro por aqui!</p> `
                 } else {
-                    res.innerHTML = `<strong>${pais}</strong>, Nossa lá deve ser muito bonito, sempre quis conhecer! `
+                    res.innerHTML = `<p><strong>${pais}</strong>, Nossa lá deve ser muito bonito, sempre quis conhecer!</p> `
                 }
-                via.innerHTML = `Eu adoro viajar quero conhecer <strong>${pais}</strong> tambem `
+                via.innerHTML = `<p>Eu adoro viajar quero conhecer <strong>${pais}</strong> tambem </p>`
             }
         </script>
     </main>
